@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: #AEC7C3;
+}
+
+canvas {
+  display: block;
+}
+
+.timeline-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cursor {
+  mix-blend-mode: difference;
+  transform: translate(-100px, -100px);
+  display: none;
+}
+
+body.enable-cursor .cursor {
+  display: block;
+}
+
+.cursor[data-cursor="pointer"] .pointer {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.cursor[data-cursor="eye"] .eye {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.cursor[data-cursor="cross"] .cross {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.cursor[data-cursor="move"] .move {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.cursor[data-cursor="none"] > div {
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+}
+
+.loading.hide {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.touch-enabled .cursor {
+  display: none !important;
+}
+
+.enable-cursor {
+  cursor: none;
+}
+
+.enable-cursor a,
+.enable-cursor button {
+  cursor: none;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Loading and Enter button styles */
+.ready .loading .progress-percent {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+}
+
+.ready .loading .progress-circle {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+}
+
+.enter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transition-property: opacity, visibility, transform;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.850);
+}
+
+.ready .enter {
+  opacity: 1 !important;
+  visibility: visible;
+  transform: scale(1);
+}
