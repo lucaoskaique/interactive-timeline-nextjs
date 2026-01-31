@@ -2,6 +2,8 @@
 
 An interactive 3D timeline built with Next.js, Three.js, GSAP, and React.
 
+> **Note:** This is a Next.js port of the original [2018 in Review](https://github.com/craftedbygc/2018-in-review) project by [Crafted by GC](https://github.com/craftedbygc).
+
 ## Tech Stack
 
 - **Next.js 16** with App Router and TypeScript
@@ -80,6 +82,10 @@ npm start
 - Videos are lazy-loaded except for the intro section
 - Three.js objects are properly disposed on component unmount
 - Consider implementing dynamic imports for the Three.js bundle to reduce initial load
+
+## Credits
+
+This project is based on the original [2018 in Review](https://github.com/craftedbygc/2018-in-review) by [Crafted by GC](https://github.com/craftedbygc). All credit for the original concept, design, and implementation goes to the talented team at Crafted by GC.
 
 ## License
 
