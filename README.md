@@ -12,7 +12,7 @@ An interactive 3D timeline built with Next.js, Three.js, GSAP, and React.
 
 ## Project Structure
 
-\`\`\`
+```
 ├── app/                    # Next.js app directory
 │   ├── layout.tsx         # Root layout
 │   ├── page.tsx           # Main page
@@ -38,27 +38,27 @@ An interactive 3D timeline built with Next.js, Three.js, GSAP, and React.
 └── public/
     ├── assets/           # Media files (images/videos)
     └── fonts/            # Bitmap fonts
-\`\`\`
+```
 
 ## Getting Started
 
 **Install dependencies:**
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 **Run development server:**
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 Open [http://localhost:3000](http://localhost:3000) to view the timeline.
 
 **Build for production:**
-\`\`\`bash
+```bash
 npm run build
 npm start
-\`\`\`
+```
 
 ## Key Differences from Original
 
@@ -70,9 +70,9 @@ npm start
 
 ## Adding New Content
 
-1. Add media files to \`public/assets/{month}/\`
-2. Update \`lib/config/assetOrder.js\` with the new files
-3. Add metadata to \`lib/config/assetData.js\`
+1. Add media files to `public/assets/{month}/`
+2. Update `lib/config/assetOrder.js` with the new files
+3. Add metadata to `lib/config/assetData.js`
 4. Restart the dev server
 
 ## Performance Notes
@@ -80,10 +80,6 @@ npm start
 - Videos are lazy-loaded except for the intro section
 - Three.js objects are properly disposed on component unmount
 - Consider implementing dynamic imports for the Three.js bundle to reduce initial load
-
-## Easter Egg
-
-Try the Konami code (↑ ↑ ↓ ↓ ← → ← → B A) while viewing the timeline! 🎮
 
 ## License
 
